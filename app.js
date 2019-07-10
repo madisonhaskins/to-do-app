@@ -40,10 +40,10 @@ function createNewToDo() {
 
       deleteButton.addEventListener('click', function(event){
         //let temptoDos;
-        let elementid = this.id;
+        let elementid = Number(this.id);
         console.log(elementid);
-        
-        const result = toDos.filter(id => toDos.id === elementid);
+
+        const result = toDos.filter(todo => todo.id != elementid);
 
         toDos = result;
 
